@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import SectionHeading from "@/components/ui/Section_Heading";
 
 export default function Home() {
   return (
@@ -43,30 +47,35 @@ export default function Home() {
       <main>
         {/* approach section */}
         <section>
-          <div className="grid md:grid-cols-5 gap-10">
+          <div className="grid md:grid-cols-6 gap-6">
+            {/* Approach Image */}
             <div className="col-span-2 relative flex flex-col items-start">
-              {/* Circular Text and Logo Container */}
-              <div className="relative w-32 h-32 flex items-center justify-center">
-                {/* SVG for Rotating Text */}
-                <svg
-                  className="absolute w-full h-full animate-spin-slow"
-                  viewBox="0 0 100 100"
+              <div className="relative w-28 h-28 flex items-center justify-center">
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                  className="absolute w-full h-full"
                 >
-                  <defs>
-                    <path
-                      id="circlePath"
-                      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                    />
-                  </defs>
-                  <text className="text-[8px] uppercase tracking-[2px] fill-[#666666]">
-                    <textPath xlinkHref="#circlePath">
-                      Luxurious, or more / want it to sound playful,
-                    </textPath>
-                  </text>
-                </svg>
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    <defs>
+                      <path
+                        id="circlePath"
+                        d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
+                      />
+                    </defs>
+                    <text className="text-[7.5px] uppercase tracking-[2.5px] fill-[#666666] font-medium">
+                      <textPath xlinkHref="#circlePath">
+                        LUXURIOUS, OR MORE • WANT IT TO SOUND PLAYFUL •
+                      </textPath>
+                    </text>
+                  </svg>
+                </motion.div>
 
-                {/* Center Logo */}
-                <div className="z-10 p-2 rounded-full">
+                <div className="z-10 rounded-full">
                   <Image
                     src="/logo/Screenshot_33.png"
                     alt="Approach Image"
@@ -77,17 +86,154 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Bottom Description */}
-              <p className="text-base text-[#666666] font-normal mt-4">
+              <p className="text-base text-[#666666] font-normal mt-1 leading-relaxed font-inter tracking-tighter">
                 We design every project with long- <br />
                 term success in mind.
               </p>
             </div>
-            <div className="col-span-3">
-              <h2 className="text-4xl font-bold mb-6">
+
+            {/* Approach Text */}
+            <div className="col-span-4">
+              <SectionHeading>
                 Our approach is straightforward— prioritizing functionality,
                 speed, and clarity for solutions.
+              </SectionHeading>
+            </div>
+          </div>
+        </section>
+
+        <section className="grid grid-cols-8 gap-3 font-normal text-[#0A0A0A] my-14">
+          {/* Added 'flex flex-col' and a minimum height if needed, like 'h-full' */}
+          <div className="col-span-2 bg-white rounded-2xl p-7 !pt-4 flex flex-col h-full">
+            <h1 className="text-[110px] font-medium leading-none tracking-tighter">
+              25<span className="text-gray-200 ml-[-2px]">+</span>
+            </h1>
+
+            <p className="text-gray-400 text-lg">Years of experience</p>
+
+            <hr className="text-[#e5e5e5] w-full my-7" />
+
+            <p className="text-[#666666] text-lg">
+              Explore how we transform ideas into extraordinary digital
+              experiences.
+            </p>
+
+            {/* 'mt-auto' pushes this div to the bottom of the flex container */}
+            <div className="mt-auto pt-6">
+              <div className="flex -space-x-2 overflow-hidden my-2">
+                {[1, 2, 3, 4].map((num) => (
+                  <div
+                    key={num}
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-white relative"
+                  >
+                    <Image
+                      src={`/image/img${num}.jpg`}
+                      alt={`User ${num}`}
+                      fill
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* Text Content */}
+              <p className="text-lg">1200+ happy users review</p>
+            </div>
+          </div>
+
+          <div className="col-span-4 bg-[#0a0a0a] rounded-3xl p-6 relative min-h-[550px] flex flex-col justify-end">
+            {/* Female Image Container */}
+            <div className="absolute -top-10 left-0 w-full h-full pointer-events-none">
+              <Image
+                src="/image/female-removebg.png"
+                alt="CEO"
+                width={500}
+                height={600}
+                className="absolute -top-12 left-0 h-[110%] w-auto object-contain object-bottom"
+                priority
+              />
+            </div>
+
+            {/* Top Right Awards */}
+            <div className="absolute top-10 right-10 flex flex-col gap-6 items-end">
+              <Image
+                src="/logo/ultra.png"
+                alt="Award 1"
+                width={100}
+                height={100}
+                className="opacity-70"
+              />
+              <Image
+                src="/logo/hyper.png"
+                alt="Award 2"
+                width={100}
+                height={100}
+                className="opacity-70"
+              />
+            </div>
+
+            {/* Text Content */}
+            <div className="relative z-20 text-white font-normal">
+              <h3 className="text-2xl">
+                “ At Floka, we merge strategy, creativity, and technology to
+                shape brands that people love. ”
+              </h3>
+              <p className="text-base mt-3">
+                Merizo H. Yelso{" "}
+                <span className="text-[#999999] ml-1">/ CEO</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="col-span-2 flex flex-col gap-6 font-sans">
+            {/* Card 1: Follow Us */}
+            <div className="bg-white rounded-[32px] p-8 shadow-sm">
+              <p className="text-[#999999] text-base font-normal mb-2">
+                Follow us
+              </p>
+              <h2 className="text-xl font-normal text-[#0A0A0A] mb-8">
+                For check updates
               </h2>
+
+              <div className="flex flex-wrap gap-1.5">
+                {["DRIBBBLE", "BEHANCE", "LINKEDIN", "X", "XING"].map(
+                  (platform) => (
+                    <button
+                      key={platform}
+                      className="px-4 py-1.5 border border-gray-200 rounded-full text-sm font-medium text-[#0A0A0A] hover:bg-gray-50 transition-colors"
+                    >
+                      {platform}
+                    </button>
+                  ),
+                )}
+              </div>
+            </div>
+
+            {/* Card 2: Impressions */}
+            <div className="bg-[#F8F8F8] rounded-[32px] text-white p-8 shadow-sm min-h-[300px] flex flex-col justify-between">
+              <p className="text-[#999999] text-base font-normal mb-2">
+                Impressions
+              </p>
+
+              <div className="flex flex-col -space-y-2">
+                {/* Solutions Bar */}
+                <div className="bg-[#F0F0F0] rounded-2xl px-3 py-2.5 flex justify-between items-center w-full font-medium">
+                  <span className="text-sm text-[#0A0A0A]">Solutions</span>
+                  <span className="text-[#666666] text-base">100%</span>
+                </div>
+
+                {/* UI/UX Bar - Black */}
+                <div className="bg-black font-medium rounded-2xl px-3 py-2.5 flex justify-between items-center w-[90%] z-10 shadow-lg">
+                  <span className="text-sm">UI/UX</span>
+                  <span className="text-base">90%</span>
+                </div>
+
+                {/* Explore Bar */}
+                <div className="bg-white border font-medium border-gray-100 rounded-2xl px-3 py-1.5 flex justify-between items-center w-[75%] z-20 shadow-md">
+                  <span className="text-sm text-gray-800">Explore</span>
+                  <span className="text-gray-500 text-base">72%</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
