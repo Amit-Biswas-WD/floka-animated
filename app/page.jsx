@@ -3,6 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/Section_Heading";
+import Marquee from "react-fast-marquee";
+import { FiArrowUpRight } from "react-icons/fi";
+import PortfolioCard from "@/components/common/PortfolioCard";
 
 export default function Home() {
   return (
@@ -102,6 +105,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Years of experience */}
         <section className="grid grid-cols-8 gap-3 font-normal text-[#0A0A0A] my-14">
           {/* Added 'flex flex-col' and a minimum height if needed, like 'h-full' */}
           <div className="col-span-2 bg-white rounded-2xl p-7 !pt-4 flex flex-col h-full">
@@ -234,6 +238,62 @@ export default function Home() {
                   <span className="text-gray-500 text-base">72%</span>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Marquee section */}
+        <section className="my-14">
+          <div className="w-full bg-[#f5f5f5] py-10">
+            <div
+              className="relative w-full"
+              style={{
+                maskImage:
+                  "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
+                WebkitMaskImage:
+                  "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
+              }}
+            >
+              <Marquee speed={60} gradient={false} pauseOnHover={true}>
+                <div className="flex items-center gap-10 overflow-hidden">
+                  <span className="text-[60px] font-medium text-[#333] leading-tight">
+                    See how our team combines creativity, technology, and
+                    strategy. Discover our innovative solutions today.
+                  </span>
+                </div>
+              </Marquee>
+            </div>
+          </div>
+        </section>
+
+        {/* Portfolio section */}
+        <section className="my-14">
+          <p className="text-sm text-[#0A0A0A] font-normal uppercase border-b border-gray-200 w-full pb-4">
+            portfolio
+          </p>
+          <SectionHeading className={"w-3/7 mx-auto"}>
+            Strategy to build powerful digital solutions.
+          </SectionHeading>
+          <div className="">
+            <div className="grid grid-cols-2 gap-4">
+              <PortfolioCard />
+              <PortfolioCard
+                image={"/image/portfolio/image2.png"}
+                category={"BRANDING, MODULE, PRODUCT, UX, WEBSITE"}
+              />
+            </div>
+            <div className="my-14">
+              <PortfolioCard image={"/image/portfolio/image3.png"} />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <PortfolioCard
+                image={"/image/portfolio/image4.png"}
+                category={"BRANDING, PRODUCT, UX"}
+              />
+              <PortfolioCard
+                image={"/image/portfolio/image5.png"}
+                category={"BRANDING, MODULE, PRODUCT, LIX"}
+              />
             </div>
           </div>
         </section>
