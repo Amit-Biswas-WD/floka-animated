@@ -17,6 +17,7 @@ import AwardList from "@/components/AwardList";
 import TeamSection from "@/components/TeamSection";
 import FaqSection from "@/components/FaqSection";
 import InsightsGrid from "@/components/InsightsGrid";
+import Footer from "@/components/Footer";
 
 const logos = [
   { id: 1, src: "/image/icon/icon1.svg", alt: "Blue Hexagon Logo" },
@@ -781,6 +782,7 @@ export default function Home() {
             <InsightsGrid />
           </div>
         </Container>
+        <Footer />
       </div>
     </main>
   );
