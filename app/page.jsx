@@ -8,8 +8,13 @@ import PortfolioCard from "@/components/common/PortfolioCard";
 import Container from "@/components/common/Container";
 import FAQSection from "@/components/FAQ";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus, FaSms } from "react-icons/fa";
 import { IoMdStar } from "react-icons/io";
+import ContactForm from "@/components/ContactForm";
+import { CiLocationOn } from "react-icons/ci";
+import CircularText from "@/components/CircularText";
+import AwardList from "@/components/AwardList";
+import TeamSection from "@/components/TeamSection";
 
 const logos = [
   { id: 1, src: "/image/icon/icon1.svg", alt: "Blue Hexagon Logo" },
@@ -61,7 +66,7 @@ export default function Home() {
           <h3 className="text-end">info@floka.com</h3>
         </div>
       </Container>
-      <main>
+      <div>
         {/* approach section */}
         <Container>
           <div className="grid md:grid-cols-6 gap-6">
@@ -684,7 +689,87 @@ export default function Home() {
             </div>
           </div>
         </Container>
-      </main>
+
+        {/* get in touch */}
+        <section className="bg-black ">
+          <Container className={""}>
+            <div className="grid grid-cols-2 gap-10 mt-6 py-20">
+              <div className="">
+                <p className="text-sm text-[#999999] font-normal uppercase flex items-center justify-between mb-3">
+                  portfolio
+                </p>
+                <SectionHeading
+                  className={"text-white w-[780px] mr-auto text-left mb-10"}
+                >
+                  Tell us about your project —whether it’s a website, SEO, or
+                  marketing.
+                </SectionHeading>
+                <div className="flex items-center gap-20 mt-20">
+                  <div className="">
+                    <p className="flex items-center gap-2 uppercase text-white text-sm font-normal mb-3">
+                      <span className="text-[#666666] ">
+                        <FaSms size={20} />
+                      </span>
+                      talk to us
+                    </p>
+                    <p className="text-[#999999] text-lg font-normal max-w-[270px]">
+                      Work and general inquiries +123 456 789 00
+                    </p>
+                  </div>
+                  <div className="">
+                    <p className="flex items-center gap-2 uppercase text-white text-sm font-normal mb-3">
+                      <span className="text-[#666666]">
+                        <CiLocationOn size={20} />
+                      </span>
+                      talk to us
+                    </p>
+                    <p className="text-[#999999] text-lg font-normal max-w-[280px]">
+                      541 Melville Ave, Palo Alto, CA 94301, United States
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="">
+                <ContactForm />
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/*  */}
+        <Container className={""}>
+          <div className="py-20">
+            <CircularText />
+          </div>
+          <div className="grid grid-cols-3 gap-10">
+            <div className="col-span-1">
+              <div className="relative">
+                <Image
+                  src="/image/man.png"
+                  alt="Approach Image"
+                  width={300}
+                  height={300}
+                  className="object-contain rounded-2xl"
+                />
+                <p className="text-base font-normal text-[#0A0A0A] mt-5 uppercase">
+                  get rewards
+                </p>
+              </div>
+            </div>
+            <div className="col-span-2">
+              <SectionHeading className="w-[780px]">
+                Accelerating growth, and unlocking new potential. Let’s build
+                your brand—together.
+              </SectionHeading>
+              <AwardList />
+            </div>
+          </div>
+          {/* grid section */}
+          <div className="">
+            <TeamSection />
+          </div>
+        </Container>
+      </div>
     </main>
   );
 }
