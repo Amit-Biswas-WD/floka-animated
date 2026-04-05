@@ -15,6 +15,8 @@ import { CiLocationOn } from "react-icons/ci";
 import CircularText from "@/components/CircularText";
 import AwardList from "@/components/AwardList";
 import TeamSection from "@/components/TeamSection";
+import FaqSection from "@/components/FaqSection";
+import InsightsGrid from "@/components/InsightsGrid";
 
 const logos = [
   { id: 1, src: "/image/icon/icon1.svg", alt: "Blue Hexagon Logo" },
@@ -585,9 +587,9 @@ export default function Home() {
 
                   <div>
                     <p className="text-xl font-normal text-[#0A0A0A] leading-relaxed transition-colors duration-500 group-hover:text-white">
-                      " As we continued to use their tool and found more use
+                      As we continued to use their tool and found more use
                       cases, our feature requests quickly found their way into
-                      their backlog. "
+                      their backlog.
                     </p>
                   </div>
 
@@ -671,9 +673,9 @@ export default function Home() {
 
                   <div>
                     <p className="text-xl font-normal text-[#0A0A0A] leading-relaxed transition-colors duration-500 group-hover:text-white">
-                      " As we continued to use their tool and found more use
+                      As we continued to use their tool and found more use
                       cases, our feature requests quickly found their way into
-                      their backlog. "
+                      their backlog.
                     </p>
                   </div>
 
@@ -739,34 +741,44 @@ export default function Home() {
         {/*  */}
         <Container className={""}>
           <div className="py-20">
-            <CircularText />
-          </div>
-          <div className="grid grid-cols-3 gap-10">
-            <div className="col-span-1">
-              <div className="relative">
-                <Image
-                  src="/image/man.png"
-                  alt="Approach Image"
-                  width={300}
-                  height={300}
-                  className="object-contain rounded-2xl"
-                />
-                <p className="text-base font-normal text-[#0A0A0A] mt-5 uppercase">
-                  get rewards
-                </p>
+            <div className="">
+              <CircularText />
+            </div>
+            <div className="grid grid-cols-3 gap-10">
+              <div className="col-span-1">
+                <div className="relative">
+                  <Image
+                    src="/image/man.png"
+                    alt="Approach Image"
+                    width={300}
+                    height={300}
+                    className="object-contain rounded-2xl"
+                  />
+                  <p className="text-base font-normal text-[#0A0A0A] mt-5 uppercase">
+                    get rewards
+                  </p>
+                </div>
+              </div>
+              <div className="col-span-2">
+                <SectionHeading className="w-[780px]">
+                  Accelerating growth, and unlocking new potential. Let’s build
+                  your brand—together.
+                </SectionHeading>
+                <AwardList />
               </div>
             </div>
-            <div className="col-span-2">
-              <SectionHeading className="w-[780px]">
-                Accelerating growth, and unlocking new potential. Let’s build
-                your brand—together.
-              </SectionHeading>
-              <AwardList />
+            {/* grid section */}
+            <div className="">
+              <TeamSection />
             </div>
           </div>
-          {/* grid section */}
+
+          {/* faq & get answer
+           */}
+          <FaqSection />
+          {/* insights */}
           <div className="">
-            <TeamSection />
+            <InsightsGrid />
           </div>
         </Container>
       </div>
