@@ -9,6 +9,7 @@ import Container from "@/components/common/Container";
 import FAQSection from "@/components/FAQ";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
 import { FaPlus } from "react-icons/fa";
+import { IoMdStar } from "react-icons/io";
 
 const logos = [
   { id: 1, src: "/image/icon/icon1.svg", alt: "Blue Hexagon Logo" },
@@ -510,6 +511,175 @@ export default function Home() {
                 <button className="text-black text-sm font-bold uppercase hover:underline">
                   Let,s Talk
                 </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative w-full h-[700px] mt-14 rounded-2xl overflow-hidden group cursor-pointer">
+            <Image
+              src="/image/Gemini_Generated_Image_4pc5lq4pc5lq4pc5.png"
+              alt="Client testimonial"
+              fill
+              className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+              sizes="100vw"
+            />
+
+            <div className="absolute bottom-10 left-10 group-hover:bottom-1/2 group-hover:left-1/2 group-hover:-translate-x-1/2 group-hover:translate-y-1/2 transition-all duration-700 ease-in-out z-10">
+              <button className="flex items-center gap-3 bg-white/90 hover:bg-white px-6 py-3 rounded-full shadow-2xl transition-all active:scale-95 whitespace-nowrap">
+                <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="white"
+                    className="w-4 h-4 ml-0.5"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <span className="text-black font-bold text-sm tracking-widest uppercase">
+                  Play Reel
+                </span>
+              </button>
+            </div>
+
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          </div>
+        </Container>
+
+        <Container>
+          <p className="text-sm text-[#0A0A0A] font-normal uppercase border-b border-gray-200 w-full pb-4">
+            user feedbacks
+          </p>
+          <SectionHeading className="w-[780px] ml-auto text-left">
+            Accelerating growth, and unlocking new potential. Let’s build your
+            brand—together.
+          </SectionHeading>
+          <div className="grid grid-cols-3 gap-7 mt-10">
+            <div className="group flex flex-col gap-4 cursor-pointer">
+              <div className="relative overflow-hidden bg-white px-7 py-5 rounded-xl border border-gray-100">
+                <div className="absolute inset-0 bg-black translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0"></div>
+
+                <div className="relative z-10">
+                  <h2 className="text-xl font-normal text-[#0A0A0A] leading-tight transition-colors duration-500 group-hover:text-white">
+                    Nicolas K. Ellington
+                  </h2>
+                  <p className="text-gray-400 text-sm font-medium mt-1 transition-colors duration-500 group-hover:text-gray-300">
+                    IT Specialist
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden bg-white px-7 py-8 rounded-xl border border-gray-100 h-[400px] flex flex-col">
+                <div className="absolute inset-0 bg-black -translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0"></div>
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <IoMdStar key={i} className="text-orange-500 text-xl" />
+                    ))}
+                  </div>
+
+                  <div>
+                    <p className="text-xl font-normal text-[#0A0A0A] leading-relaxed transition-colors duration-500 group-hover:text-white">
+                      " As we continued to use their tool and found more use
+                      cases, our feature requests quickly found their way into
+                      their backlog. "
+                    </p>
+                  </div>
+
+                  <div className="mt-auto">
+                    <p className="text-gray-400 text-sm font-bold uppercase tracking-widest flex items-center transition-colors duration-500 group-hover:text-gray-300">
+                      <span className="mr-2">“</span>
+                      GREAT DESIGN SOLUTIONS
+                      <span className="ml-1">”</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="group flex flex-col gap-4 cursor-pointer">
+              <div className="relative overflow-hidden bg-white px-7 py-8 rounded-xl border border-gray-100 h-[400px] flex flex-col">
+                <div className="absolute inset-0 bg-black translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0"></div>
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <IoMdStar key={i} className="text-orange-500 text-xl" />
+                    ))}
+                  </div>
+
+                  <div>
+                    <p className="text-xl font-normal text-[#0A0A0A] leading-relaxed transition-colors duration-500 group-hover:text-white">
+                      " As we continued to use their tool and found more use
+                      cases, our feature requests quickly found their way into
+                      their backlog. "
+                    </p>
+                  </div>
+
+                  <div className="mt-auto">
+                    <p className="text-gray-400 text-sm font-bold uppercase tracking-widest flex items-center transition-colors duration-500 group-hover:text-gray-300">
+                      <span className="mr-2">“</span>
+                      GREAT DESIGN SOLUTIONS
+                      <span className="ml-1">”</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden bg-white px-7 py-5 rounded-xl border border-gray-100">
+                <div className="absolute inset-0 bg-black -translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0"></div>
+
+                <div className="relative z-10">
+                  <h2 className="text-xl font-normal text-[#0A0A0A] leading-tight transition-colors duration-500 group-hover:text-white">
+                    Nicolas K. Ellington
+                  </h2>
+                  <p className="text-gray-400 text-sm font-medium mt-1 transition-colors duration-500 group-hover:text-gray-300">
+                    IT Specialist
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group flex flex-col gap-4 cursor-pointer">
+              <div className="relative overflow-hidden bg-white px-7 py-5 rounded-xl border border-gray-100">
+                <div className="absolute inset-0 bg-black translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0"></div>
+
+                <div className="relative z-10">
+                  <h2 className="text-xl font-normal text-[#0A0A0A] leading-tight transition-colors duration-500 group-hover:text-white">
+                    Nicolas K. Ellington
+                  </h2>
+                  <p className="text-gray-400 text-sm font-medium mt-1 transition-colors duration-500 group-hover:text-gray-300">
+                    IT Specialist
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden bg-white px-7 py-8 rounded-xl border border-gray-100 h-[400px] flex flex-col">
+                <div className="absolute inset-0 bg-black -translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0"></div>
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <IoMdStar key={i} className="text-orange-500 text-xl" />
+                    ))}
+                  </div>
+
+                  <div>
+                    <p className="text-xl font-normal text-[#0A0A0A] leading-relaxed transition-colors duration-500 group-hover:text-white">
+                      " As we continued to use their tool and found more use
+                      cases, our feature requests quickly found their way into
+                      their backlog. "
+                    </p>
+                  </div>
+
+                  <div className="mt-auto">
+                    <p className="text-gray-400 text-sm font-bold uppercase tracking-widest flex items-center transition-colors duration-500 group-hover:text-gray-300">
+                      <span className="mr-2">“</span>
+                      GREAT DESIGN SOLUTIONS
+                      <span className="ml-1">”</span>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
