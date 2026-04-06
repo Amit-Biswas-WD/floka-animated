@@ -1,7 +1,7 @@
 import React from "react";
 import { HiOutlineTrophy } from "react-icons/hi2";
 
-const CircularTextSmall = () => {
+const CircularText = () => {
   const text = "PLAYFUL, LUXURIOUS, OR MORE / WANT IT TO SOUND ";
   const characters = text.split("");
   const degreeStep = 360 / characters.length;
@@ -35,4 +35,4 @@ const CircularTextSmall = () => {
   );
 };
 
-export default CircularTextSmall;
+export default CircularText;

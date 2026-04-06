@@ -40,6 +40,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Inter", sans-serif;
+  padding: 15px;
 
   /* padding-inline: 1rem; */
 }
