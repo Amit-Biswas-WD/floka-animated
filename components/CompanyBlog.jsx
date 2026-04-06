@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import { FiArrowUpRight, FiPlus } from "react-icons/fi";
+import { FiPlus } from "react-icons/fi";
 import SectionHeading from "./ui/Section_Heading";
+import Container from "./common/Container";
 
-const InsightsGrid = () => {
+const CompanyBlog = () => {
   const blackCardStyles =
     "bg-[#0f0f0f] text-white p-10 rounded-2xl flex flex-col justify-start relative group cursor-pointer overflow-hidden";
   const labelStyles = "text-sm font-normal text-white uppercase";
@@ -15,7 +16,7 @@ const InsightsGrid = () => {
     "absolute bottom-6 left-6 z-10 bg-white text-black p-3 rounded-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out";
 
   return (
-    <div className="my-20">
+    <Container className="lg:py-20 md:py-16 sm:py-12 py-8">
       <div className="flex flex-col items-center gap-2 text-center">
         <p className="text-sm text-[#0A0A0A] font-normal uppercase w-fit">
           insights
@@ -101,8 +102,8 @@ const InsightsGrid = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
-export default InsightsGrid;
+export default CompanyBlog;

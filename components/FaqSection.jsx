@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import SectionHeading from "./ui/Section_Heading";
+import Container from "./common/Container";
 
 const faqData = [
   {
@@ -51,14 +52,16 @@ const FaqSection = () => {
   };
 
   return (
-    <div className="">
-      <p className="text-sm text-[#0A0A0A] font-normal uppercase border-b border-gray-200 w-full pb-4">
-        faq & get answer
-      </p>
-      <SectionHeading className="w-[780px] ml-auto text-left my-6">
-        Have more questions? We’ve answers.
-      </SectionHeading>
-      <div className="grid grid-cols-3 gap-10">
+    <Container className="lg:py-20 md:py-16 sm:py-12 py-8">
+      <div className="">
+        <p className="text-sm text-[#0A0A0A] font-normal uppercase border-b border-gray-200 w-full pb-4">
+          faq & get answer
+        </p>
+        <SectionHeading className="max-w-[780px] ml-auto text-left my-6">
+          Have more questions? We’ve answers.
+        </SectionHeading>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div className="col-span-1">
           <p className="text-[#666666] text-lg font-normal pb-5 max-w-[300px]">
             Don’t found anything yet. Feel free to ask anything. Let’s Talk
@@ -174,7 +177,7 @@ const FaqSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
